@@ -1,0 +1,46 @@
+<!-- Belazzouz Abderrahmen -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice</title>
+</head>
+
+<body>
+
+<script>
+
+// pour la création des éléments
+for(var i=0 ; i<=2; i++){
+   var nouveau = document.createElement('div');
+   document.body.appendChild(nouveau);
+ 
+   var button = document.createElement('button');
+   nouveau.appendChild(button);
+   var text = document.createTextNode('button');
+   button.appendChild(text);
+   nouveau.style.border='2px solid black '
+   nouveau.style.padding='50px'
+     button.onclick= function(){
+     	this.parentElement.style.backgroundColor = "pink";
+     }
+}
+// pour l'ajout des styles
+
+   var input = document.createElement('input');
+   input.addEventListener('click', function () {
+   				this.style.color='red';
+   })
+   input.addEventListener('blur', function () {
+  			 	this.style.color='white';
+   })
+
+   input.addEventListener('input', function () {
+   				this.style.color='green';
+   })
+
+	document.body.appendChild(input);
+	 
+</script>
+	
+</body>
+</html>
